@@ -1,0 +1,16 @@
+#text{
+    color: midnightblue;
+    font-size: 40px;
+    background-color: coral;
+    text-align: center;
+    margin-top: 10%;
+}
+
+.textClass{
+    color: olivedrab;
+    font-size: 40px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: bisque;
+    text-align: center;
+    margin-top: 10%;
+}
