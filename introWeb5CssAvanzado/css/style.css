@@ -1,102 +1,87 @@
-body{
+body {
 
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 200;
-    font-size: 10px;
-    color:rgb(92, 40, 16);
-    background-color:rgba(245, 245, 245, 0.849);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 400;
+    font-size: 12px;
+    color:#363636;
+    background:darkgray
 
 }
 
 /*
-
 La propiedad font-family define una lista de fuentes o familias de fuentes, con un orden de prioridad, para utilizar en un elemento seleccionado. A diferencia de la mayoría de las propiedades CSS, los valores se separan con comas (",") para indicar que son valores alternativos.
-
 La propiedad font-weight de CSS especifica el peso o grueso de la letra. Algunos tipos de letra sólo están disponibles en normal y bold.
-
 La propiedad font-size especifica la dimensión de la letra. Este tamaño puede, a su vez, alterar el aspecto de alguna otra cosa, ya que se usa para calcular la longitud de las unidades em y ex.
-
 La propiedad de CSS color selecciona el valor de color de primer plano del contenido de elemento de texto y decoraciones de texto. Tambien establece el valor currentcolor (en-US) que se puede usar como un valor indirecto en otras propiedades, y es el valor predeterminado para otras propiedades de color, como border-color.
-
 Background-color es un propiedad de CSS que define el color de fondo de un elemento, puede ser el valor de un color o la palabra clave transparent.
-
 */
 
-h1{
+/* Header*/
+
+h1 {
 
     text-transform: uppercase;
 
 }
 
 /*
-
 La propiedad CSS text-transform especifica el cambio entre mayúsculas y minúsculas del texto de un elemento. Puede ser usada para que un texto aparezca completamente en mayúsculas, en minúsculas, o con la primera letra de cada palabra en mayúscula.
-
 */
 
-h1 span{
+h1 span {
 
-    color:rgb(173, 0, 38);
+    color:#8A6500
 
 }
 
-#hombreAvatarHeader{
+#avatarHeader {
 
     text-align: center;
-    border-bottom-color: darkblue;
-    border-bottom-width: 10px;
-    border-bottom-style:groove;
+    border-bottom-color: #8A6500;
+    border-bottom-width: 5px;
+    border-bottom-style: double;
 
 }
 
 /*
-
 La propiedad border-bottom-color define el color del borde inferior de un elemento, con la ayuda de un valor de color o con la palabra clave transparent.
-
 Border-bottom-width define el ancho del borde inferior de una caja.
-
 Border-bottom-style define el estilo de línea del borde inferior de una caja.
-
 */
 
-#hombreAvatar img{
+#avatar img {
 
-    width: 200px;
-    height: 200px;
-    border-radius: 25%;
+    background-color: black;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
 
 }
 
 /*
-
 La propiedad CSS width especifica la anchura del area de contenido de un elemento. De forma predeterminada, establece el ancho del área de contenido, pero si el box-sizing se establece en border-box, establece el ancho del área del borde.
-
 La propiedad CSS height especifica la altura de un elemento. Por defecto, la propiedad define la altura del área de contenido. Sin embargo, si box-sizing está configurado como border-box, determina la altura del área de borde.
-
 The border-radius CSS property rounds the corners of an element's outer border edge. You can set a single radius to make circular corners, or two radii to make elliptical corners.
-
 */
 
-.container{
+.container {
 
-    max-width: 1000px;
+    max-width: 800px;
+    background: darkgray;
     margin-top: 80px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 
 }
 
 /*
-
 Las propiedades min-width y max-width (en-US) sobreescriben el width.
-
 La propiedad CSS margin establece el margen para los cuatro lados. Es una abreviación para evitar tener que establecer cada lado por separado con las otras propiedades de margen.
 El margin-bottom CSS (margen-inferior) es la propiedad de un elemento que establece el espacio requerido en la parte inferior de un elemento. Tambien se permiten valores negativos.
-
 */
 
-.menu ul{
+.menu ul {
 
     text-align: center;
     margin: auto;
@@ -106,43 +91,35 @@ El margin-bottom CSS (margen-inferior) es la propiedad de un elemento que establ
 }
 
 /*
-
 La propiedad abreviada de CSS padding establece el área de relleno en los cuatro lados de un elemento a la vez.
-
 El tipo de estilo de lista especifica la apariencia del listado.
-
 */
 
-.menu ul li{
+.menu ul li {
 
-    display:inline-block;
+    display: inline-block;
     position: relative;
 
 }
 
 /*
-
 La propiedad CSS display especifica si un elemento es tratado como block or inline element y el diseño usado por sus hijos, como flow layout(Diseño de Flujo), grid(Cuadricula) o flex(Flexible).
-
 Formalmente la propiedad display establece los tipos de visualización interna y externa de un elemento. La tipo externa establece la participacion de un elemento en flow layout; la tipo interna establece el layout(Diseño) de los hijos. Algunos valores de display estan totalmente definidos con sus especificaciones propias; por ejemplo el detalle de que pasa cuando display: flex es declarado y definido en la especificacion de Modelo Flexible de Caja(Flexible Box Model specification) de CSS. Vea la siguientes tablas para mas especificaciones individuales.
-
 Además de los Diferentes Tipos de caja de Visualizacion, el valor de none permite Desactivar la Visualizacion DE UN Elemento; cuando no se utiliza none, todos los elementos descendentes también quedan desactivados. El documento se procesa como si el elemento no existiera en el árbol de documentos.
-
 */
 
+.menu ul li a {
 
-.menu ul li a{
-
-    background-color: black;
-    color: aliceblue;
+    background: black;
+    color: #ffffff;
     font-size: 10px;
     text-decoration: none;
     display: block;
-    padding: 10px;
+    padding: 5px;
 
 }
 
-.menu ul li ul{
+.menu ul li ul {
 
     position: absolute;
     top: 25px;
@@ -153,38 +130,45 @@ Además de los Diferentes Tipos de caja de Visualizacion, el valor de none permi
 
 }
 
-.menu ul li:hover ul{
+.menu ul li:hover ul {
 
     display: block;
 
 }
 
-.menu ul li ul li{
+.menu ul li ul li {
 
     display: block;
-    width: 50px;
+    width: 60px;
     height: 20px;
     margin: 0;
     text-align: left;
+    font-size: 14px;
 
 }
 
-/*Fin de header*/
+/* Fin Header*/
 
-h2{
+/* Inicio Sección */
 
-    color: black;
+/* Izquierda CV */
+
+/* Acerca de */
+
+h2 {
+
+    color: #8A6500;
     text-transform: uppercase;
 
 }
 
-h2::before{
+h2::before {
 
-    content: "//";
+    content: "// ";
 
 }
 
-.clearfix:before, .clearfix:after{
+.clearfix:before {
 
     display: table;
     line-height: 1;
@@ -192,32 +176,58 @@ h2::before{
 
 }
 
-.pull-left{
+.pull-left {
 
-    float: left;
+    float: left
 
 }
 
-.row{
+.row {
 
     padding-left: 10px;
     padding-right: 10px;
 
 }
 
-.col-60{
-
-    width: 60%;
-
-}
-
-.col-10{
+.col-10 {
 
     width: 10%;
 
 }
 
-.education ul{
+.col-20 {
+
+    width: 20%;
+
+}
+
+.col-40 {
+
+    width: 40%;
+
+}
+
+.col-60 {
+
+    width: 60%;
+
+}
+
+.col-80 {
+
+    width: 80;
+
+}
+
+.col-90 {
+
+    width: 90%;
+
+}
+
+/* Educación */
+
+.education ul {
 
     list-style: none;
     margin: 0;
@@ -225,138 +235,159 @@ h2::before{
 
 }
 
-    .education .year{
+.education .year {
 
-        font-size: 1.1em;
-        font-weight: bold;
+    font-size: 1.1em;
+    font-weight: bold;
 
-    }
+}
 
-    .education .description{
+.education .description {
 
-        background: #EEEEEE;
-        border-bottom: 1px solid #DDDDDD;
-        padding: 10px;
-        margin-bottom: 10px;
-        position: relative;
-        box-sizing: border-box;
+    background: #cfcfcf;
+    border-bottom: 1px solid #cfcfcf;
+    padding: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    box-sizing: border-box;
 
-    }
+}
 
-    .education .description h3, .education .description p{
+.education .description h3,
+.education .description p {
 
-        margin-top: 0;
-        margin-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
 
-    }
+}
 
-    .education .description p::after{
+.education .description p::after {
 
-        content: "";
-        position: absolute;
-        border: 8px solid transparent;
-        border-right: 8px solid #EEEEEE;
-        top: 5px;
-        left: -16px;
+    content: "";
+    position: absolute;
+    border: 8px solid transparent;
+    border-right: 8px solid #EEEEEE;
+    top: 5px;
+    left: -16px;
 
-    }
+}
 
-    .experience .job .place{
+/* Educación */
 
-        font-size: 1.2em;
-        font-weight: bold;
+.job .where {
 
-    }
+    font-size: 1.2em;
+    font-weight: bold;
 
-    .year{
+}
 
-        font-size: 0.8em;
+.job.year {
 
-    }
+    font-size: 0.8em;
 
-    .profesion{
+}
 
-        margin-top: 0;
-        margin-bottom: 0;
-        margin-left: 3em;
-        font-size: 0.9em;
-        text-align: justify;
+.job .profesion {
 
-    }
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 6em;
+    font-size: 0.9em;
+    
+}
 
-    .description{
+.job .description {
 
-        margin-top: 0;
-        margin-left: 3em;
-        text-align: justify;
+    margin-top: 0;
+    margin-left: 6em;
+    text-align: justify;
 
-    }
+}
 
-    /*
+/* Derecha CV */
 
-    .containerskills{
+/* Skills */
 
-        width: 100%;
-        background-color: #ddd;
+/*
 
-    }
+.skills {
 
-        .skills{
+		list-style-type: none;
+		margin:0;
+		padding: 0;
 
-            text-align: right;
-            padding-top: 10px;
-            padding-bottom: 10px;
-            color: white;
+	}
 
-        }
+		.skills-item {		
 
-    */
+			color: #FFFFFF;
+			font-weight: bold;
+			text-transform: uppercase;
+			padding: 2px 0 2px 5px;
+			margin-top: 5px;				
+			background: #8a650052;
+			
+		}
 
-        .Java{
+		.skills-item[data-percent="10"] { width: 10% }
+		.skills-item[data-percent="20"] { width: 20% }
+		.skills-item[data-percent="30"] { width: 30% }
+		.skills-item[data-percent="40"] { width: 40% }
+		.skills-item[data-percent="50"] { width: 50% }
+		.skills-item[data-percent="60"] { width: 60% }
+		.skills-item[data-percent="70"] { width: 70% }
+		.skills-item[data-percent="80"] { width: 80% }
+		.skills-item[data-percent="90"] { width: 90% } 
 
-            color: #DDDDDD;
-            margin: 3px;
-            list-style-type: none;
-            text-align: right;
-            width: 25%;
-            background-color: #04AA6D;
+*/
 
-        }
+.Html {
+    
+    color: #DDDDDD;
+    margin: 3px;
+    list-style-type: none;
+    text-align: right;
+    width: 50%;
+    background-color: #8a650052;
 
-        .HTML{
+}
 
-            color: #DDDDDD;
-            margin: 3px;
-            list-style-type: none;
-            text-align: right;
-            width: 40%;
-            background-color: #2196F3;
+.Css {
 
-        }
+    color: #DDDDDD;
+    margin: 3px;
+    list-style-type: none;
+    text-align: right;
+    width: 50%;
+    background-color: #8a650052;
 
-        .JavaScript{
+}
 
-            color: #DDDDDD;
-            margin: 3px;
-            list-style-type: none;
-            text-align: right;
-            width: 20%;
-            background-color: #f44336;
+.JavaScript {
 
-        }
+    color: #DDDDDD;
+    margin: 3px;
+    list-style-type: none;
+    text-align: right;
+    width: 10%;
+    background-color: #8a650052;
 
-        .Python{
+}
 
-            color: #DDDDDD;
-            margin: 3px;
-            list-style-type: none;
-            text-align: right;
-            width: 10%;
-            background-color: #808080;
+.SolidWorks {
 
-        }
+    color: #DDDDDD;
+    margin: 3px;
+    list-style-type: none;
+    text-align: right;
+    width: 99%;
+    background-color: #8a650052;
 
-.icon-star-grey{
+}
+
+/* Idiomas */
+
+.icon-star{
 
     background: url(../image/star-grey.png)no-repeat;
     width: 110px;
@@ -367,26 +398,38 @@ h2::before{
 
 .icon-star-red{
 
-    background: url(../image/star-red.png)no-repeat;
+    background:  url(../image/star-red.png) no-repeat;
     width: 110px;
     height: 14px;
-    float: right;
+    float: left;
 
 }
 
 .obj-star{
 
-    margin: 5px;
-    padding: 5px;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
     border-bottom: 5px;
 
 }
 
+/* Hobbies */
+
 .hobby{
 
-    background: #ba190a;
+    background: #8a650052;
     color: #fafafa;
     padding: 8px;
-    font-size: 0.6em;
+    font-size: 1em;
+
+}
+
+/* Copyright | Pie de Página */
+
+footer p{
+
+	text-align: right;
+	font-size: 1.2em;
+	border-top: 1px solid #DDDDDD;
 
 }
