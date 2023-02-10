@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro JavaScript</title>
+    <script>
+
+        function saludar (){
+
+            console.log(
+
+            "Hola"
+
+            )
+
+        }
+
+        function sumar (V1, V2=10){
+
+            console.log("Suma: ");
+            return(V1 + V2);
+
+        }
+
+    </script>
+
+    <script>
+
+        function llamarNombre(nombre){
+
+            alert("Hola " + nombre)
+
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <h1>
+
+        JavaScript
+
+    </h1>
+
+    <script>
+
+        saludar();
+        console.log("El resultado de la suma es: " + (sumar(3,20)));
+
+    </script>
+
+    <script>
+
+        let nombre = prompt("¿Cuál es tu nombre?");
+        llamarNombre(nombre)
+
+    </script>
+
+    <script>
+
+        function trabajo(horasTrabajadas, sueldoPorHora) {
+        alert("El sueldo es: " + (horasTrabajadas * sueldoPorHora));
+
+        }
+
+        let horasTrabajadas = prompt("Ingresa las horas trabajadas");
+        let sueldoPorHora = prompt("Ingresa el sueldo por hora");
+
+        trabajo(horasTrabajadas, sueldoPorHora);
+
+    </script>
+
+    <script>
+        let n1 = (3 + 2);
+        let n2 = (2 * 5);
+        let n3 = (n1 / n2);
+
+    
+        function operacion(n3) {
+        alert("resultado: " + n3)
+        }
+
+    </script>
+    <script>
+    operacion(n3)
+    </script>
+
+    <script>
+        let peso = prompt("Escribe tu peso:");
+        let altura = prompt("Escribe tu altura en M");
+        let imc= (peso/(altura*altura));
+        function imcFinal(imc){
+        alert("Tu indice de masa corporal es: " + imc)
+    }
+
+    </script>
+
+<script>
+imcFinal(imc)
+</script>
+
+</body>
+
+</html>
