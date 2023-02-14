@@ -71,16 +71,29 @@ console.log(list);
 list.sort();
 console.log(list);
 
-/* Ordenando ascendentemente el arreglo (TOMA EL PRIMER NUMERO!!!) */
+/* Ordenando de menor a mayor */
 
 list.sort(
 
     function (val1,val2) {
 
-        return val1 > val2;
+        return val1 - val2;
 
     }
 
 );
 
 console.log(list);
+
+
+
+let varN = list.map(
+
+    function(valN1){
+
+        return valN * 2
+    }
+
+)
+
+console.log(varN);
