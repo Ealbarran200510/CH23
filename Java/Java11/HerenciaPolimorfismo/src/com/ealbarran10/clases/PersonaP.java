@@ -5,6 +5,12 @@ public class PersonaP {
 	private String nombre;
 	private int edad;
 	
+	public PersonaP (String nombre, int edad) {
+		
+		this.nombre = nombre;
+		this.edad = edad;
+	}
+
 	public String getNombre() {
 		return nombre;
 	}
