@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T-PL5</title>
+</head>
+<body>
+    <script>
+    
+    const numeroSecreto = Math.floor(Math.random() * 100) + 1;
+    const intentos = [];
+
+    function number(val) {
+        
+        if (isNaN(val)) {
+            return false;
+        }
+        
+        return true;
+
+    }
+
+    function game() {
+
+        let intento = prompt("Adivina el numero entre 1 y 100:");
+
+        while (!esNumero(intento)) {
+            intento = prompt("Valor no válido. Ingresa un número:");
+        }
+
+        intento = parseInt(intento);
+        intentos.push(intento);
+
+        if (intento === numeroSecreto) {
+
+            console.log("Felicidades, adivinaste el número secreto!");
+            console.log("Números ingresados antes de adivinar el número secreto: ", intentos);
+
+        } else {
+
+            console.log("Ups, el número secreto es incorrecto, vuelve a intentarlo.");
+            
+            game();
+
+        }
+    }
+
+    game();
+
+    </script>
+</body>
+</html>
