@@ -23,6 +23,10 @@ dependencies {
 	implementation 'com.mysql:mysql-connector-j:8.0.31'
 	// https://mvnrepository.com/artifact/io.swagger.core.v3/swagger-annotations
 	implementation group: 'io.swagger.core.v3', name: 'swagger-annotations', version: '2.2.2'
+	
+	// Dependecias Test Mockito
+	
+	testImplementation "org.mockito:mockito-core:3.+"
 
 }
 

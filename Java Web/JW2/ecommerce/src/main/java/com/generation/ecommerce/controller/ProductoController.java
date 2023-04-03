@@ -3,17 +3,26 @@ package com.generation.ecommerce.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.generation.ecommerce.model.Producto;
 import com.generation.ecommerce.services.ProductoService;
 
-// RestController par soportar métodos HTTP
+// CrossOrigin indica que se realizarán conexiones cruzadas entre servidores
+@CrossOrigin(origins = "*", methods = { RequestMethod.GET, RequestMethod.POST, RequestMethod.DELETE,
+        RequestMethod.PUT })
+
+// RestController para soportar métodos HTTP
 @RestController
 
 // RequestMapping para mapear la ruta que deben seguir los métodos HTTP
@@ -38,36 +47,54 @@ public class ProductoController {
 	}
 	
 	// HTTP Get
+	// Mostrar todos los productos
 	@GetMapping
 	public List<Producto> getProducto () {
 		
-		return productoServicio.leerProducto();
+		return productoServicio.leerProductos();
 		
 	}
 	
-	// HTTP Post
-	//@PostMapping
+	// HTTP Get
+	// Mostrar un solo producto
+	@GetMapping(path = "{productoId}")
+	public Producto getProducto (@PathVariable ("productoId")Long productoId) {
+			
+		return productoServicio.leerProducto(productoId);
+			
+	}
 	
-	//public void postProducto () {
+	// HTTP Post
+	@PostMapping
+	
+	// Se agrega SOLAMENTE el cuerpo del producto
+	public void postProducto (@RequestBody Producto producto) {
 		
-		//return productoServicio.crearProducto();
+		// Se modifica el producto en la DB utilizando el cuerpo del producto a través de Crud
+		productoServicio.crearProducto(producto);
 		
-	//}
+	}
 	
 	// HTTP Put
-	//@PutMapping
-	//public void putProducto () {
+	@PutMapping(path = "{productoId}") // http://localhost:8080/miOtzo/productos/
+	public void putProducto (@PathVariable ("productoId") Long productoId,
+			@RequestParam(required=false) String nombre,
+			@RequestParam(required=false) String descripcion,
+			@RequestParam(required=false) double precio,
+			@RequestParam(required=false) String URL_Imagen
+			) {
 		
-		//return productoServicio.actualizarProducto();
+		productoServicio.actualizarProducto(productoId, nombre, descripcion, URL_Imagen, precio);
 		
-	//}
+	}
 	
 	// HTTP Delete
-	//@DeleteMapping
-	//public void deleteProducto () {
+	// Path borra elementos por Id utilizando la ruta: /productos/Id
+	@DeleteMapping(path = "{productoId}")
+	public void deleteProducto (@PathVariable ("productoId")Long productoId) {
 		
-		//return productoServicio.borrarProducto();
+		productoServicio.borrarProducto(productoId);
 		
-	//}
+	}
 
 }

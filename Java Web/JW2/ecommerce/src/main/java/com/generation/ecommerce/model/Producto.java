@@ -40,11 +40,13 @@ public class Producto {
 	// Especifica el nombre de la columna en la DBA
 	@Column(name = "id", unique = true, nullable = false)
 	
+	// Es posible agregar el atributo contador para actualizar la cantidad de producto
+	
 	private Long id;
 	private String nombre;
 	private String descripcion;
 	private String URL_Imagen;
-	private double precio;
+	private Double precio;
 	
 	// Se crea un constructor vacío para serealizar y deserializar el objeto a través de la biblioteca Jackson
 	
@@ -53,6 +55,7 @@ public class Producto {
 	}
 	
 	// Después se crea el constructor con todos los parámetros del objeto
+	// Para contador se agregar contador++ al constructor, se agregan get, set, crear contador.controller y actualizar en todo lo que impacta
 
 	public Producto(Long id, String nombre, String descripcion, String uRL_Imagen, double precio) {
 		
